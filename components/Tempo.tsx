@@ -5,10 +5,11 @@ import {View, Text, StyleSheet, Image} from 'react-native';
         max:number,
         min:number,
         description:string,
-        condition:string
+        condition:string,
+        moon_phase:string
     }
 
-export default function Tempo({date, max, min, description, condition } : propsTempo){
+export default function Tempo({date, max, min, description, condition, moon_phase } : propsTempo){
 
     const Icones: Record<string, any> = {
         clear_day: require('../assets/png/clear_day.png'),
@@ -30,11 +31,17 @@ export default function Tempo({date, max, min, description, condition } : propsT
                 <Text style={styles.texto}>Máx: {max}</Text>
                 <Text style={styles.texto}>Mín: {min}</Text>
                 <Text style={styles.texto}>Descrição: {description}</Text>
-                <Text style={styles.texto}>Cond: {condition}</Text>
                 <Image
                     style={styles.imagem}
                     source={Icones[condition]}
                     />
+                <Image
+                    style={styles.imagem}
+                    source={{uri:`https://assets.hgbrasil.com/weather/icons/moon/${moon_phase}.png`}}
+                    
+                
+                    />
+                    
         </View>
     );
 }
