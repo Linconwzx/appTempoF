@@ -7,7 +7,7 @@ export default function Galinhos(){
    const [dados, setDados] = useState<any[]>([]);
 
     async function buscaTempo(){
-        const response = await Api.get('weather?array_limit=4&fields=only_results,temp,city_name,forecast,condition,max,min,description,moon_phase,date&key=f5179305&city_name=Itanhaem,SP');
+        const response = await Api.get('weather?array_limit=4&fields=only_results,temp,city_name,forecast,condition,max,min,description,moon_phase,date&key=f5179305&city_name=Galinhos');
         setDados(response.data.forecast);
     }
     useEffect(

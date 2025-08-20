@@ -18,6 +18,24 @@ export default function Home(){
                 >
                     <Text style={styles.textoBtn}>Itanhaém</Text>
                 </TouchableOpacity>
+                <TouchableOpacity 
+                    style={styles.btn}
+                    onPress={()=>navigation.navigate('Galinhos' as never)}
+                >
+                    <Text style={styles.textoBtn}>Galinhos</Text>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                    style={styles.btn}
+                    onPress={()=>navigation.navigate('JoaoAmaro' as never)}
+                >
+                    <Text style={styles.textoBtn}>João Amaro</Text>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                    style={styles.btn}
+                    onPress={()=>navigation.navigate('São Paulo' as never)}
+                >
+                    <Text style={styles.textoBtn}>São Paulo</Text>
+                </TouchableOpacity>
         </View>
     );
 } 
